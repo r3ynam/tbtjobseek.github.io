@@ -30,7 +30,7 @@
                 display:flex;
                 justify-content: center;
                 align-content: center;
-                background: rgba(0,0,0,0);
+                background: rgb(0,0,0,0);
                 transition:1s;
             }
             header ul li{
@@ -62,7 +62,7 @@
 }*/
 
 #main{
-	background-image: url("../Downloads/tbtjobseekimages/bluepng.jpeg");
+	background-image: url("tbtjobseekimages/bluepng.jpeg");
 	min-height: 70vh;
 	background-position: bottom center;
 	background-size:cover;
