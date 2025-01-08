@@ -4,9 +4,91 @@
   <title> Tampa Bay Technical High School Job Search </title>
   <link href="design.css" rel="stylesheet" type="text/css"/>
     </head>
-    
-    
+    <!-- beginning of the internal style sheet-->
+<style>
+  *{
+		margin:0;
+		padding:0;
+	}
+	
+	/*they added in header code but i dont want to change my heading code from where it is*/
+	
+	.banner{
+		width:100%;
+		height:150px;
+		background-color:#B93D3D;
+		display:flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		gap:20px;
+	}
+	
+	.banner h1{
+		font-size:3rem;
+		text-shadow:0px 0px 10px rgba(0,0,0,.5);
+	}
+	
+	.banner p{
+		font-size:2rem;
+		text-decoration:underline;
+	}
+	
+	.question-answers{
+		margin:auto;
+		max-width:786px;
+		padding:3% 0;
+	}
+	
+	.question{
+		height:50px;
+		background-color:#B93D3D;
+		padding:0 10px;
+		margin:10px 0;
+		font-size:1.7rem;
+		display:flex;
+		justify-content:space-between;
+		align-items:center;
+		cursor:pointer;
+		border-radius:5px;
+	}
+	
+	.question span{
+		font-size:3rem;
+	}
+	
+	.question span:last-child{
+		display:none;
+	}
+	
+	.answer{
+		font-size:1.3rem;
+		padding:20px;
+		margin: 0 5px;
+		border: 1px solid #6B6B6B;
+		border-top:0;
+		border-bottom-left-radius:5px;
+		border-bottom-right-radius:5px;
+		display:none;
+	}
+	
+	.answer.active {
+		margin-top:-10px;
+	}
+	
+	.active {
+		display: block !important;
+	}
+	
+	.disable {
+		display: none !important;
+	}
+</style>    
+
+
+
     <body>
+      <!--beginning of the top most header with the hyperlinks-->
       <header>
           <img src="tbtjobseekimages/tbtpng.png" width="200" height="147" alt=""/>
           <h2>TAMPA BAY TECHNICAL HIGH SCHOOL</h2>
@@ -20,6 +102,93 @@
         </div>
       </header>
 
+      <!--main body of coing starting-->
+      <main>
+        <section class="banner">
+        <h1>Frequently Asked Quedtions!</h1>
+        <p>Need Answers? Look through here!</p>
+      </section>
+      <section class="question-answers">
+        <!--first question-->
+        <div class="question question0">
+          What is the purpose of this site?
+          <span>+</span>
+          <span>-</span>
+        </div>
+        <div class="answer answer0">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in tempus metus. Sed fermentum ante massa, sollicitudin venenatis arcu fringilla.
+        </div>
+        
+        <!--second question-->
+        <div class="question question1">
+          Who was this site created for?
+          <span>+</span>
+          <span>-</span>
+        </div>	
+        <div class="answer answer1">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in tempus metus. Sed fermentum ante massa, sollicitudin venenatis arcu fringilla.
+        </div>
+        
+        <!-- third question-->
+        <div class="question question2">
+          What is the purpose of this site?
+          <span>+</span>
+          <span>-</span>
+        </div>	
+        <div class="answer answer2">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in tempus metus. Sed fermentum ante massa, sollicitudin venenatis arcu fringilla.
+        </div>
+        
+        <!--fourth question -->
+        <div class="question question3">
+          Why was this site made?
+          <span>+</span>
+          <span>-</span>
+          </div>
+        <div class="answer answer3">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in tempus metus. Sed fermentum ante massa, sollicitudin venenatis arcu fringilla.
+        </div>
+        
+        <!--fifth question -->
+        <div class="question question4">
+          How will this benefit students?
+          <span>+</span>
+          <span>-</span>
+          </div>
+        <div class="answer answer4">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in tempus metus. Sed fermentum ante massa, sollicitudin venenatis arcu fringilla.
+        </div>
+        
+        <!--disclaimer message -->
+        <div class="question question5">
+          Disclaimer!
+          <span>+</span>
+          <span>-</span>
+          </div>
+        <div class="answer answer5">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in tempus metus. Sed fermentum ante massa, sollicitudin venenatis arcu fringilla.
+        </div>
+      </section>
+      </main>
+  
+<script>
+const questions = document.querySelectorAll(".question");
+
+questions.forEach((question,index)=> {
+  question.addEventListener("click", () => {
+    document.querySelector(".answer" + index).classList.toggle("active");
+    question.querySelector(".span:first-child").classList.toggle("disable");
+    question.querySelector(".span:last-child").classList.toggle("active");
+  })
+  
+})
+
+
+</script>
+
+
+
+<!--old java that i am most likely not going to use-->
       <!--<section id="faq">
         <h2 class="title">Frequently Asked Questions</h2>
        </section>
@@ -42,7 +211,7 @@
     </div>-->
 
 
-
+<!--beginning of the footer code-->
         <footer>
           <div class="footer-container">
             <div class="footer">
@@ -65,6 +234,7 @@
             </div>
           </div>
         </footer>
+        <!--old script and java added that most likely isnt going to get used-->
      <!-- <script src="./app.js"></script>-->
     </body>
   </html>
