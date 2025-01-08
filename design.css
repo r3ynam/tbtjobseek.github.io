@@ -282,7 +282,7 @@ transition:all 0.4s ease-out;}
 }
 
 
-/*faq page style*/
+/*faq page style
 #faq{
 	min-height:100vh;
 	width:80%;
@@ -294,7 +294,7 @@ transition:all 0.4s ease-out;}
 /*.title{
 	font-size:3rem;
 	margin:2rem 0rem;
-	}*/
+	}
 
 .faq{
 	max-width:700px;
@@ -349,3 +349,4 @@ svg {
 		transform: translateY(0px);
 	}
 }
+ may come back this but looking for a new method*/
